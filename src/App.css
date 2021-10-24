@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 2rem;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #e3dcc0;
+}
+
+.board-game {
+  width: 45vw;
+  height: 80vh;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  border: 1px solid rgba(96, 153, 58, 0.438);
+  background: #001f3f;
+  border-top: none;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  gap: 5px;
+}
+
+.shapes {
+  background-color: #3D9970;
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+.history {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+}
+
+.history input {
+  width: 10vw;
+  height: 5vh;
+  margin-top: 1rem;
+  background: #39CCCC;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@media(max-width: 920px) {}
+
+
+@media( max-width: 600px) {
+  .board-game {
+    grid-template: repeat(3, 20vh) / repeat(3, 20vw);
+    width: 63vw;
+    height: 62vh;
+    
+  }
+  .history input {
+    width: 30vw;
+  }
+  .shapes{
+    font-size: 2.5rem;
+  }
+}
+
+@media( max-width: 320px) {
+  .board-game {
+    grid-template: repeat(3, 20vh) / repeat(3, 20vw);
+    width: 63vw;
+    height: 62vh;
+  }
+  .shapes{
+    font-size: 2.5rem;
+  }
+}
