@@ -39,7 +39,6 @@ const Game = () => {
         const current = historyPoint[stepNumber];
         let shapes=[];
         shapes.push(...current);
-        console.log(historyPoint);
         if (winner || shapes[i]) return;
         shapes[i] = xOro;
         setHistoryBoardState([...historyPoint, shapes]);
@@ -56,7 +55,7 @@ const Game = () => {
     const handleMove = () =>
         historyBoardState.map((_, move) => {
             return (
-                <li key={move}>
+                <li>
                     <input type='button' onClick={() => goTo(move)} value={move ? `Go to move #${move}` : "Go to Start"}/>
                 </li>
             );
