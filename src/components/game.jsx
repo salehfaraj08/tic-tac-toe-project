@@ -39,7 +39,7 @@ const Game = () => {
         const current = historyPoint[stepNumber];
         let shapes=[];
         shapes.push(...current);
-        
+        console.log(historyPoint);
         if (winner || shapes[i]) return;
         shapes[i] = xOro;
         setHistoryBoardState([...historyPoint, shapes]);
