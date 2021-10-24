@@ -10,7 +10,7 @@ const Game = () => {
     const [turn, setTurn] = useState('x');
     const [turnsHistory, setTurnsHistory] = useState([]);
     const [winner, setWinner] = useState('');
-    const xOro = turn !== 'x' ? "✖️" : "⭕";
+    const xOro = turn !== 'x' ? "x" : "o";
 
     const isWinner = (checkboard) => {
         const winOptions = [
