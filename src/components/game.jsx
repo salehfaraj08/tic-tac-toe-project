@@ -37,15 +37,14 @@ const Game = () => {
     const handleClick = (i) => {
         const historyPoint = historyBoardState.slice(0, stepNumber + 1);
         const current = historyPoint[stepNumber];
-        let shapes=[]
-        shapes.push(...current)
-        console.log(current);
+        let shapes=[];
+        shapes.push(...current);
         
         if (winner || shapes[i]) return;
         shapes[i] = xOro;
         setHistoryBoardState([...historyPoint, shapes]);
         setStepNumber(historyPoint.length);
-        setTurnsHistory([...turnsHistory, turn])
+        setTurnsHistory([...turnsHistory, turn]);
         setTurn(turn === 'x' ? 'o' : 'x');
     };
 
